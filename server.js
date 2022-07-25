@@ -12,7 +12,9 @@ const app = express()
 // Mount Middleware
 
 // Mount Routes
-
+app.get('/', (req, res) => {
+  res.send('Welcome to SipUp')
+})
 // Tell Express to Listen
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}...`)
