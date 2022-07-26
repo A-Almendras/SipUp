@@ -1,10 +1,10 @@
 // Initializing our juice and order models
 const mongoose = require('mongoose')
-const juiceSchema = require('./juice')
-const orderSchema = require('./order')
+const JuiceSchema = require('./juice')
+const OrderSchema = require('./order')
 
-const Juice = mongoose.model('Juice', juiceSchema)
-const Order = mongoose.model('Order', orderSchema)
+const Juice = mongoose.model('Juice', JuiceSchema)
+const Order = mongoose.model('Order', OrderSchema)
 
 module.exports = {
   Juice,

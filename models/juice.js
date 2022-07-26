@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const juiceSchema = new Schema(
+const JuiceSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
@@ -18,4 +18,4 @@ const juiceSchema = new Schema(
   },
   { timestamps: true }
 )
-module.exports = juiceSchema
+module.exports = JuiceSchema
