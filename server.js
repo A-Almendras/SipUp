@@ -1,5 +1,6 @@
 // Dependencies
 const express = require('express')
+const routes = require('./routes')
 const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
@@ -18,6 +19,9 @@ app.use(logger('dev'))
 app.get('/', (req, res) => {
   res.send('Welcome to SipUp')
 })
+
+app.use('/api', routes)
+
 // Tell Express to Listen
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}...`)
