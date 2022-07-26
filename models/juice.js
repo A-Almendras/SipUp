@@ -3,13 +3,22 @@ const Schema = mongoose.Schema
 
 const juiceSchema = new Schema(
   {
-    size: { type: String, required: true },
-    sugarLevel: { type: String, required: true },
-    iceLevel: { type: String, required: true },
+    name: { type: String, required: true },
     description: { type: String, required: true },
-    quantity: { type: String, required: true },
-    address: { type: String, required: true },
-    comments: { type: String, required: true }
+    image: { type: String, required: true },
+    size: { type: String, required: true },
+    sugarLevel: [
+      {
+        level: { type: String, required: true }
+      }
+    ],
+    iceLevel: [
+      {
+        level: { type: String, required: true }
+      }
+    ],
+    prices: { type: [Number], required: true },
+    comments: { type: String }
   },
   { timestamps: true }
 )
