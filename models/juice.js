@@ -1,3 +1,4 @@
+// Setting up our juice schema for our model
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
