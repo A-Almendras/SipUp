@@ -13,11 +13,6 @@ const juiceSchema = new Schema(
         level: { type: String, required: true }
       }
     ],
-    iceLevel: [
-      {
-        level: { type: String, required: true }
-      }
-    ],
     prices: { type: [Number], required: true },
     comments: { type: String }
   },
