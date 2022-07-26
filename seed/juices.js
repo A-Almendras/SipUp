@@ -1,9 +1,10 @@
 const db = require('../db')
-const { Juice } = require('../models')
+const { Order, Juice } = require('../models')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
+// When seed file executed, connectes to Mongo db and creates 4 juices in juices collection
 const main = async () => {
   const juices = [
     {
@@ -47,7 +48,20 @@ const main = async () => {
       comments: 'Any special instructions please enter here'
     }
   ]
+
+  const preOrder = await new Order({
+    name: 'Flavia Almendras',
+    paymentMethod: 'Cash',
+    pickupMethod: 'In-store',
+    address: '123 Lolsob',
+    totalAmount: 10,
+    juices: [{ juice_Id: juices._id, quantity: 1 }],
+    status: 'Ordering'
+  })
+  await preOrder.save()
+
   await Juice.insertMany(juices)
+  console.log('PreOrder has been placed!') // will mostly likely not be needed in the end
   console.log('Fruits have been juiced!')
 }
 
