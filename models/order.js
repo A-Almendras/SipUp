@@ -15,7 +15,8 @@ const orderSchema = new Schema(
         juice_Id: { type: Schema.Types.ObjectId, ref: 'Juice' },
         quantity: { type: Number, required: true }
       }
-    ]
+    ],
+    status: { type: String, required: true }
   },
   { timestamps: true }
 )
