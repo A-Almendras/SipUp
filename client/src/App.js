@@ -1,5 +1,5 @@
-import './App.css'
-import Header from './components/Header'
+import './styles/App.css'
+import Nav from './components/Nav'
 import Footer from './components/Footer'
 import LandingPage from './pages/LandingPage'
 import Home from './pages/Home'
@@ -9,7 +9,10 @@ import OrderDetails from './pages/OrderDetails'
 function App() {
   return (
     <div className="App">
-      <Header />
+      <header className="App-header">
+        <Nav />
+      </header>
+      <h1>Hello</h1>
       <LandingPage />
       <Home />
       <JuiceDetails />
