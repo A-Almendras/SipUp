@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import JuiceCard from '../components/JuiceCard'
 
-const Home = () => {
+const JuicesPage = () => {
   const [juices, setJuices] = useState([])
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default JuicesPage

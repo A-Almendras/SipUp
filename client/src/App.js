@@ -3,7 +3,7 @@ import './styles/App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import LandingPage from './pages/LandingPage'
-import Home from './pages/Home'
+import JuicesPage from './pages/JuicesPage'
 import JuiceDetails from './pages/JuiceDetails'
 import OrderDetails from './pages/OrderDetails'
 
@@ -15,9 +15,9 @@ const App = () => {
       </header>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="home" element={<Home />} />
-        <Route path="juice/details/:juiceId" element={<JuiceDetails />} />
-        <Route path="order/details/:orderId" element={<OrderDetails />} />
+        <Route path="juices" element={<JuicesPage />} />
+        <Route path="juices/:id" element={<JuiceDetails />} />
+        <Route path="orders/:id" element={<OrderDetails />} />
       </Routes>
       <footer>
         <Footer />
