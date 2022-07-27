@@ -2,7 +2,6 @@
 
 const { Order, Juice } = require('../models')
 // const { JuiceSchema } = require('../models/juice')
-// method to grab all the juices from the database
 // const getAllJuices = async (req, res) => {
 //   console.log('hello')
 //   try {
@@ -15,7 +14,8 @@ const { Order, Juice } = require('../models')
 //   }
 // }
 
-const getJuices = async (req, res) => {
+// method to grab all the juices from the database
+const getAllJuices = async (req, res) => {
   const juices = await Juice.find({})
   res.json(juices)
 }
@@ -70,8 +70,8 @@ const getOrderById = async (req, res) => {
 }
 
 module.exports = {
-  // getAllJuices,
-  getJuices,
+  getAllJuices,
+  // getJuices,
   getJuiceById,
   createOrder,
   getAllOrders,
