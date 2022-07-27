@@ -13,7 +13,6 @@ const App = () => {
       <header className="App-header">
         <Nav />
       </header>
-      <h1>Hello</h1>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="home" element={<Home />} />

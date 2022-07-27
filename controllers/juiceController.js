@@ -2,8 +2,14 @@ const { Juice } = require('../models')
 
 // method to grab all the juices from the database
 const getAllJuices = async (req, res) => {
-  const juices = await Juice.find({})
-  res.json(juices)
+  try {
+    const juices = await Juice.find({})
+    // console.log(juices)
+    res.status(200).json(juices)
+  } catch (error) {
+    console.log(error)
+    res.status(500).send(error.message)
+  }
 }
 
 // method to get a specific juice
