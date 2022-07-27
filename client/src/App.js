@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import JuiceDetails from './pages/JuiceDetails'
 import OrderDetails from './pages/OrderDetails'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
