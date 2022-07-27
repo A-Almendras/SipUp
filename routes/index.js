@@ -1,18 +1,18 @@
 // MOUNT ROUTES
 const { Router } = require('express')
 const router = Router()
-const controllers = require('../controllers')
+const { juiceController, orderController } = require('../controllers')
 
 router.get('/', (req, res) => res.send('This is root!'))
 
-router.get('/juices', controllers.getAllJuices)
+router.get('/juices', juiceController.getAllJuices)
 
-router.get('/juices/:id', controllers.getJuiceById)
+router.get('/juices/:id', juiceController.getJuiceById)
 
-router.post('/order', controllers.createOrder)
+router.post('/order', orderController.createOrder)
 
-router.get('/orders', controllers.getAllOrders)
+router.get('/orders', orderController.getAllOrders)
 
-router.get('/orders/:id', controllers.getOrderById)
+router.get('/orders/:id', orderController.getOrderById)
 
 module.exports = router
