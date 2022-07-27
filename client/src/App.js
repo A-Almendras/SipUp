@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -13,11 +14,15 @@ function App() {
         <Nav />
       </header>
       <h1>Hello</h1>
-      <LandingPage />
-      <Home />
-      <JuiceDetails />
-      <OrderDetails />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="home" element={<Home />} />
+        <Route path="juice/details/:juiceId" element={<JuiceDetails />} />
+        <Route path="order/details/:orderId" element={<OrderDetails />} />
+      </Routes>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
