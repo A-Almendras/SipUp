@@ -35,8 +35,35 @@ const getOrderById = async (req, res) => {
   }
 }
 
+// method to update an order
+const updateOrder = async (req, res) => {
+  try {
+    const order = await Order.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(order)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+// method to delete an order
+const deleteOrder = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Order.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Order has been deleted')
+    }
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createOrder,
   getAllOrders,
-  getOrderById
+  getOrderById,
+  updateOrder,
+  deleteOrder
 }

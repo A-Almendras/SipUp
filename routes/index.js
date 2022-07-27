@@ -15,4 +15,8 @@ router.get('/orders', orderController.getAllOrders)
 
 router.get('/orders/:id', orderController.getOrderById)
 
+router.put('/order/:id', orderController.updateOrder)
+
+router.delete('/order/:id', orderController.deleteOrder)
+
 module.exports = router
