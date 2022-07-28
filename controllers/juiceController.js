@@ -18,7 +18,7 @@ const getJuiceById = async (req, res) => {
     const { id } = req.params
     const juice = await Juice.findById(id)
     if (juice) {
-      return res.status(200).json({ juice })
+      return res.status(200).json(juice)
     }
     return res.status(400).send('Juice with the specified ID does not exist')
   } catch (error) {

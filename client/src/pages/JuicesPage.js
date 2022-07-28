@@ -8,11 +8,12 @@ const JuicesPage = () => {
   useEffect(() => {
     const getJuices = async () => {
       const response = await axios.get('http://localhost:3001/api/juices')
-      console.log(response)
+      // console.log(response)
       setJuices(response.data)
     }
     getJuices()
   }, [])
+
   return (
     <div>
       <h1>Welcome to SipUp</h1>
