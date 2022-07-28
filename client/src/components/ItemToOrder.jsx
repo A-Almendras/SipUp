@@ -1,10 +1,8 @@
 import { useState } from 'react'
 // import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import e from 'cors'
 
 const ItemToOrder = ({ juiceDetails, juiceId }) => {
-  // const [orders, setOrders] = useState([])
   const [price, setPrice] = useState(0)
 
   const initialState = {

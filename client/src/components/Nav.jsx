@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+// import ItemToOrder from './ItemToOrder'
 
 const Nav = () => {
   return (
@@ -9,7 +10,7 @@ const Nav = () => {
       <div>
         <Link to="/">Sign In</Link>
         <Link to="juices">Juices</Link>
-        <Link to="orders/:id">Orders</Link>
+        <Link to="orders">Orders</Link>
       </div>
     </nav>
   )
