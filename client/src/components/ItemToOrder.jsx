@@ -17,34 +17,19 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
   const handleChange = (e) => {
     if (e.target.value === 'small') {
       setPrice(juiceDetails.prices[0])
-      initialState.size = 'small'
+      formState.size = 'small' // still a bit unsure about this
     } else if (e.target.value === 'medium') {
       setPrice(juiceDetails.prices[1])
-      initialState.size = 'medium'
+      formState.size = 'medium'
     } else if (e.target.value === 'large') {
       setPrice(juiceDetails.prices[2])
-      initialState.size = 'large'
+      formState.size = 'large'
     }
     console.log(e.target.value)
 
     setFormState({ ...formState, [e.target.id]: e.target.value })
     console.log(e.target)
   }
-
-  // const handleSizeClick = (e) => {
-  //   // e.preventDefault()
-  //   if (e.target.value === 'Small') {
-  //     setPrice(juiceDetails.prices[0])
-  //     juiceDetails.size = 'Small'
-  //   } else if (e.target.value === 'Medium') {
-  //     setPrice(juiceDetails.prices[1])
-  //     initialState.size = 'Medium'
-  //   } else if (e.target.value === 'Large') {
-  //     setPrice(juiceDetails.prices[2])
-  //     juiceDetails.size = 'Large'
-  //   }
-  //   console.log(e.target.value)
-  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
