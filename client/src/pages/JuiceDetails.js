@@ -24,7 +24,7 @@ const JuiceDetails = () => {
 
   return (
     <div>
-      <h1>Juice Details Page Component</h1>
+      <h1>Juice Details Page</h1>
       <h1>{juiceDetails.name}</h1>
       <img src={juiceDetails.image} alt={juiceDetails.name} />
       <p>Ingredients: {juiceDetails.description}</p>
