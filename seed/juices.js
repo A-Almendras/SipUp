@@ -12,8 +12,8 @@ const main = async () => {
       description: 'Carrot, Pineaple, Orange, Ginger',
       image:
         'https://img.emedihealth.com/wp-content/uploads/2020/03/ginger-carrot-juice-feat-1.jpg',
-      size: 'Large',
-      sugarLevel: [{ level: '0%' }, { level: '50%' }, { level: '100%' }],
+      size: ['Small', 'Medium', 'Large'],
+      sugarLevel: ['0%', '50%', '100%'],
       prices: [8, 10, 12],
       comments: 'Any special instructions please enter here'
     },
@@ -22,8 +22,8 @@ const main = async () => {
       description: 'Kale, Apple, Celery, Cucumber',
       image:
         'https://www.cleaneatingkitchen.com/wp-content/uploads/2019/06/green-juice-on-table-with-vegetables.jpg',
-      size: 'Large',
-      sugarLevel: [{ level: '0%' }, { level: '50%' }, { level: '100%' }],
+      size: ['Small', 'Medium', 'Large'],
+      sugarLevel: ['0%', '50%', '100%'],
       prices: [8, 10, 12],
       comments: 'Any special instructions please enter here'
     },
@@ -32,8 +32,8 @@ const main = async () => {
       description: 'Lemon, Turmeric, Orange, Ginger',
       image:
         'https://i.pinimg.com/originals/bc/f6/08/bcf6081f4229b50759e41c25edf369a3.jpg',
-      size: 'Large',
-      sugarLevel: [{ level: '0%' }, { level: '50%' }, { level: '100%' }],
+      size: ['Small', 'Medium', 'Large'],
+      sugarLevel: ['0%', '50%', '100%'],
       prices: [8, 10, 12],
       comments: 'Any special instructions please enter here'
     },
@@ -42,8 +42,8 @@ const main = async () => {
       description: 'Carrot, Apple, Spinach, Kale, Orange',
       image:
         'https://perchancetocook.com/wp-content/uploads/2018/04/Tropical-Kale-Carrot-Orange-Juice-perchancetocook-5-741x1024.jpg',
-      size: 'Large',
-      sugarLevel: [{ level: '0%' }, { level: '50%' }, { level: '100%' }],
+      size: ['Small', 'Medium', 'Large'],
+      sugarLevel: ['0%', '50%', '100%'],
       prices: [8, 10, 12],
       comments: 'Any special instructions please enter here'
     }

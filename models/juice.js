@@ -6,12 +6,8 @@ const JuiceSchema = new Schema(
     name: { type: String, required: true },
     description: { type: String, required: true },
     image: { type: String, required: true },
-    size: { type: String, required: true },
-    sugarLevel: [
-      {
-        level: { type: String, required: true }
-      }
-    ],
+    size: { type: [String], required: true },
+    sugarLevel: { type: [String], required: true },
     prices: { type: [Number], required: true },
     comments: { type: String }
   },
