@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage'
 import JuicesPage from './pages/JuicesPage'
 import JuiceDetails from './pages/JuiceDetails'
 import OrderDetails from './pages/OrderDetails'
+import ItemDetails from './components/ItemDetails'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="juices" element={<JuicesPage />} />
         <Route path="juices/:juiceId" element={<JuiceDetails />} />
         <Route path="orders" element={<OrderDetails />} />
+        <Route path="orders/:orderId" element={<ItemDetails />} />
       </Routes>
       <footer>
         <Footer />

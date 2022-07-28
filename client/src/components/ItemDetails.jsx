@@ -1,10 +1,16 @@
+import axios from 'axios'
+
 const ItemDetails = (props) => {
   let items = []
 
   for (let i = 0; i < props.orders.length; i++) {
     items.push(props.orders[i])
   }
-  console.log(items)
+
+  const handleDelete = async (id) => {
+    await axios.delete(`http://localhost:3001/api/orders/${id}`)
+    props.getOrders()
+  }
 
   return (
     <div>
@@ -17,7 +23,7 @@ const ItemDetails = (props) => {
           <p>Size:{item.size}</p>
           <p>Comments:{item.comments}</p>
           <button>Update</button>
-          <button>Delete</button>
+          <button onClick={() => handleDelete(item._id)}>Delete</button>
         </div>
       ))}
     </div>

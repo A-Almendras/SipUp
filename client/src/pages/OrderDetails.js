@@ -6,13 +6,15 @@ import ItemDetails from '../components/ItemDetails'
 const OrderDetails = (props) => {
   const [orders, setOrders] = useState([])
 
+  // Removed from useeffect for delete to work properly
+  const getOrders = async () => {
+    const response = await axios.get('http://localhost:3001/api/orders')
+    // console.log(response)
+    setOrders(response.data)
+    // console.log(response.data)
+  }
+
   useEffect(() => {
-    const getOrders = async () => {
-      const response = await axios.get('http://localhost:3001/api/orders')
-      // console.log(response)
-      setOrders(response.data)
-      // console.log(response.data)
-    }
     getOrders()
   }, [])
 
@@ -21,7 +23,7 @@ const OrderDetails = (props) => {
   return (
     <div>
       <h1>Order Details</h1>
-      <ItemDetails orders={orders} />
+      <ItemDetails orders={orders} getOrders={getOrders} />
     </div>
   )
 }
