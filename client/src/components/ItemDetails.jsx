@@ -1,6 +1,7 @@
 const ItemDetails = (props) => {
   let items = []
-  for (let i = 1; i < props.orders.length; i++) {
+
+  for (let i = 0; i < props.orders.length; i++) {
     items.push(props.orders[i])
   }
   console.log(items)
@@ -11,7 +12,7 @@ const ItemDetails = (props) => {
       {items.map((item) => (
         <div className="item-card" key={item.juiceId}>
           {/* <img id="pfp" src={review.pfp} alt="pfp" /> */}
-          <h2>{item.juiceName}</h2>
+          <h2>{item.name}</h2>
           <p>Quantity:{item.quantity}</p>
           <p>Size:{item.size}</p>
           <p>Comments:{item.comments}</p>

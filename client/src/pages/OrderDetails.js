@@ -3,14 +3,15 @@ import { useEffect, useState } from 'react'
 import ItemDetails from '../components/ItemDetails'
 // import ItemToOrder from '../components/ItemToOrder'
 
-const OrderDetails = () => {
+const OrderDetails = (props) => {
   const [orders, setOrders] = useState([])
 
   useEffect(() => {
     const getOrders = async () => {
       const response = await axios.get('http://localhost:3001/api/orders')
       // console.log(response)
-      setOrders(response.data.orders)
+      setOrders(response.data)
+      // console.log(response.data)
     }
     getOrders()
   }, [])

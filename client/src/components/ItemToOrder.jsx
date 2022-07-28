@@ -17,13 +17,13 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
   const handleChange = (e) => {
     if (e.target.value === 'small') {
       setPrice(juiceDetails.prices[0])
-      juiceDetails.size = 'small'
+      initialState.size = 'small'
     } else if (e.target.value === 'medium') {
       setPrice(juiceDetails.prices[1])
       initialState.size = 'medium'
     } else if (e.target.value === 'large') {
       setPrice(juiceDetails.prices[2])
-      juiceDetails.size = 'large'
+      initialState.size = 'large'
     }
     console.log(e.target.value)
 
@@ -31,20 +31,20 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
     console.log(e.target)
   }
 
-  const handleSizeClick = (e) => {
-    // e.preventDefault()
-    if (e.target.value === 'Small') {
-      setPrice(juiceDetails.prices[0])
-      juiceDetails.size = 'Small'
-    } else if (e.target.value === 'Medium') {
-      setPrice(juiceDetails.prices[1])
-      initialState.size = 'Medium'
-    } else if (e.target.value === 'Large') {
-      setPrice(juiceDetails.prices[2])
-      juiceDetails.size = 'Large'
-    }
-    console.log(e.target.value)
-  }
+  // const handleSizeClick = (e) => {
+  //   // e.preventDefault()
+  //   if (e.target.value === 'Small') {
+  //     setPrice(juiceDetails.prices[0])
+  //     juiceDetails.size = 'Small'
+  //   } else if (e.target.value === 'Medium') {
+  //     setPrice(juiceDetails.prices[1])
+  //     initialState.size = 'Medium'
+  //   } else if (e.target.value === 'Large') {
+  //     setPrice(juiceDetails.prices[2])
+  //     juiceDetails.size = 'Large'
+  //   }
+  //   console.log(e.target.value)
+  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -62,7 +62,7 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
       <h2>${price}</h2>
 
       <label htmlFor="size">Size:</label>
-      <select id="size" onChange={handleChange} onClick={handleSizeClick}>
+      <select id="size" onChange={handleChange}>
         <option value=""></option>
         <option value="small">Small</option>
         <option value="medium">Medium</option>

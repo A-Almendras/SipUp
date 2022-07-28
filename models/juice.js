@@ -7,9 +7,7 @@ const JuiceSchema = new Schema(
     description: { type: String, required: true },
     image: { type: String, required: true },
     size: { type: [String], required: true },
-    sugarLevel: { type: [String], required: true },
-    prices: { type: [Number], required: true },
-    comments: { type: String }
+    prices: { type: [Number], required: true }
   },
   { timestamps: true }
 )

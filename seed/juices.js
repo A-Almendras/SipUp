@@ -13,9 +13,7 @@ const main = async () => {
       image:
         'https://img.emedihealth.com/wp-content/uploads/2020/03/ginger-carrot-juice-feat-1.jpg',
       size: ['Small', 'Medium', 'Large'],
-      sugarLevel: ['0%', '50%', '100%'],
-      prices: [8, 10, 12],
-      comments: 'Any special instructions please enter here'
+      prices: [8, 10, 12]
     },
     {
       name: 'The Hulk',
@@ -23,9 +21,7 @@ const main = async () => {
       image:
         'https://www.cleaneatingkitchen.com/wp-content/uploads/2019/06/green-juice-on-table-with-vegetables.jpg',
       size: ['Small', 'Medium', 'Large'],
-      sugarLevel: ['0%', '50%', '100%'],
-      prices: [8, 10, 12],
-      comments: 'Any special instructions please enter here'
+      prices: [8, 10, 12]
     },
     {
       name: 'Liquid Gold',
@@ -33,9 +29,7 @@ const main = async () => {
       image:
         'https://i.pinimg.com/originals/bc/f6/08/bcf6081f4229b50759e41c25edf369a3.jpg',
       size: ['Small', 'Medium', 'Large'],
-      sugarLevel: ['0%', '50%', '100%'],
-      prices: [8, 10, 12],
-      comments: 'Any special instructions please enter here'
+      prices: [8, 10, 12]
     },
     {
       name: 'Detoxifier',
@@ -43,22 +37,20 @@ const main = async () => {
       image:
         'https://perchancetocook.com/wp-content/uploads/2018/04/Tropical-Kale-Carrot-Orange-Juice-perchancetocook-5-741x1024.jpg',
       size: ['Small', 'Medium', 'Large'],
-      sugarLevel: ['0%', '50%', '100%'],
-      prices: [8, 10, 12],
-      comments: 'Any special instructions please enter here'
+      prices: [8, 10, 12]
     }
   ]
 
-  const preOrder = await new Order({
-    name: 'Flavia Almendras',
-    paymentMethod: 'Cash',
-    pickupMethod: 'In-store',
-    address: '123 Lolsob',
-    totalAmount: 10,
-    juices: [{ juice_Id: juices._id, quantity: 1 }],
-    status: 'Ordering'
-  })
-  await preOrder.save()
+  // const preOrder = await new Order({
+  //   name: 'Flavia Almendras',
+  //   paymentMethod: 'Cash',
+  //   pickupMethod: 'In-store',
+  //   address: '123 Lolsob',
+  //   totalAmount: 10,
+  //   juices: [{ juice_Id: juices._id, quantity: 1 }],
+  //   status: 'Ordering'
+  // })
+  // await preOrder.save()
 
   await Juice.insertMany(juices)
   console.log('PreOrder has been placed!') // will mostly likely not be needed in the end
