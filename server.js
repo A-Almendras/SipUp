@@ -24,16 +24,16 @@ app.get('/', (req, res) => {
   res.send('Welcome to SipUp')
 })
 
-app.get('/*', (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`)
-})
-
 app.use('/api', routes)
 // app.get('/juices', juiceController.getJuices)
 // app.get('/juices', async (req, res) => {
 //   const juices = await Juice.find({})
 //   res.json(juices)
 // })
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+})
 
 // Tell Express to Listen
 app.listen(PORT, () => {
