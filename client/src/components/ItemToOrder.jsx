@@ -6,7 +6,7 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
   const [price, setPrice] = useState(0)
 
   const initialState = {
-    juiceId: juiceId,
+    name: juiceDetails.name,
     size: '',
     quantity: '',
     comments: ''
@@ -25,10 +25,8 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
       setPrice(juiceDetails.prices[2])
       formState.size = 'large'
     }
-    console.log(e.target.value)
 
     setFormState({ ...formState, [e.target.id]: e.target.value })
-    console.log(e.target)
   }
 
   const handleSubmit = async (event) => {
@@ -38,7 +36,7 @@ const ItemToOrder = ({ juiceDetails, juiceId }) => {
       'http://localhost:3001/api/order',
       formState
     )
-    console.log(response)
+    // console.log(response)
     setFormState(initialState)
   }
 

@@ -10,7 +10,7 @@ const OrderSchema = new Schema(
     // pickupMethod: { type: String, required: true },
     // address: { type: String },
     // amount: { type: Number, required: true },
-    juiceId: { type: Schema.Types.ObjectId, ref: 'Juice' },
+    name: { type: Schema.Types.String, ref: 'Juice' },
     size: { type: String, required: true },
     quantity: { type: Number, required: true },
     comments: { type: String }
