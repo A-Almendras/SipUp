@@ -1,82 +1,96 @@
 import { useState } from 'react'
-// import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const ItemToOrder = ({ juiceDetails, juiceId }) => {
+const ItemToOrder = (props) => {
   const [price, setPrice] = useState(0)
+  const [name, setName] = useState(props.juiceDetails.name)
+  const [size, setSize] = useState('')
+  const [quantity, setQuantity] = useState('')
+  const [comments, setComments] = useState('')
 
-  const initialState = {
-    name: juiceDetails.name,
-    size: '',
-    quantity: '',
-    comments: ''
+  const addItemToOrder = async (e) => {
+    await axios.post('http://localhost:3001/api/order', {
+      name: props.name,
+      size: size,
+      quantity: quantity,
+      comments: comments
+    })
   }
-
-  const [formState, setFormState] = useState(initialState)
-
-  const handleChange = (e) => {
-    if (e.target.value === 'small') {
-      setPrice(juiceDetails.prices[0])
-      formState.size = 'small' // still a bit unsure about this
-    } else if (e.target.value === 'medium') {
-      setPrice(juiceDetails.prices[1])
-      formState.size = 'medium'
-    } else if (e.target.value === 'large') {
-      setPrice(juiceDetails.prices[2])
-      formState.size = 'large'
+  const changeSize = (event) => {
+    let size = event.target.value
+    setSize(size)
+    if (event.target.value === 'small') {
+      setPrice(8)
+      console.log(price)
+    } else if (event.target.value === 'medium') {
+      setPrice(10)
+    } else if (event.target.value === 'large') {
+      setPrice(12)
     }
-
-    setFormState({ ...formState, [e.target.id]: e.target.value })
+  }
+  const changeQuantity = (event) => {
+    let qty = parseInt(event.target.value)
+    setQuantity(qty)
+    // if (size === 'small') {
+    //   if (qty > 1) {
+    //     setPrice(price * qty)
+    //   } else {
+    //     price - 8
+    //   }
+    // }
+  }
+  const changeComments = (event) => {
+    let comment = event.target.value
+    setComments(comment)
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    // console.log(formState)
-    let response = await axios.post(
-      'http://localhost:3001/api/order',
-      formState
-    )
-    // console.log(response)
-    setFormState(initialState)
+  const handleSubmit = (event) => {
+    addItemToOrder(event)
+    console.log(props.orders)
   }
+
+  const handleChange = (e) => {}
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>${price}</h2>
+    <div>
+      <h2>Price for 1: ${price}</h2>
 
-      <label htmlFor="size">Size:</label>
-      <select id="size" onChange={handleChange}>
-        <option value=""></option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="size">Size:</label>
+        <select id="size" onChange={changeSize}>
+          <option value=""></option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
 
-      <label htmlFor="level">Sugar Level:</label>
-      <select id="level">
-        <option value=""></option>
-        <option value="0%">0%</option>
-        <option value="50%">50%</option>
-        <option value="100%">100%</option>
-      </select>
-      <label htmlFor="quantity">Quantity:</label>
-      <input
-        type="number"
-        id="quantity"
-        onChange={handleChange}
-        defaultValue={1}
-        value={formState.quantity}
-      />
-      <label htmlFor="comments">Comments:</label>
-      <textarea
-        id="comments"
-        onChange={handleChange}
-        value={formState.comments}
-        cols="30"
-        rows="10"
-      ></textarea>
-      <button type="submit">Add to Order</button>
-    </form>
+        <label htmlFor="level">Sugar Level:</label>
+        <select id="level">
+          <option value=""></option>
+          <option value="0%">0%</option>
+          <option value="50%">50%</option>
+          <option value="100%">100%</option>
+        </select>
+        <label htmlFor="quantity">Quantity:</label>
+        <input
+          type="number"
+          id="quantity"
+          onChange={changeQuantity}
+          defaultValue={1}
+          value={quantity}
+        />
+        <label htmlFor="comments">Comments:</label>
+        <textarea
+          id="comments"
+          onChange={changeComments}
+          value={comments}
+          placeholder={'Write any comments youd want to let us know'}
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button type="submit">Add to Order</button>
+      </form>
+    </div>
   )
 }
 
