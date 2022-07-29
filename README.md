@@ -51,10 +51,9 @@
 
 ### **_Future Updates_**
 
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [x] Completed Update
-- [x] ~~Strikethrough~~ Items Also
+- [ ] Styling
+- [ ] Sign in Page
+- [x] Update an Item
 
 ---
 
