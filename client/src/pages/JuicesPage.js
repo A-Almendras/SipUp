@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import JuiceCard from '../components/JuiceCard'
 
-const JuicesPage = () => {
+const JuicesPage = (props) => {
   const [juices, setJuices] = useState([])
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const JuicesPage = () => {
 
   return (
     <div>
-      <h1>Welcome to SipUp</h1>
+      <h1>Welcome</h1> <p>{props.firstname}</p>
       <JuiceCard juices={juices} />
     </div>
   )
