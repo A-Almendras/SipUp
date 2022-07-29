@@ -27,17 +27,21 @@ const ItemDetails = (props) => {
   return (
     <div>
       <h1>Item Details</h1>
-      {items.map((item, index) => (
-        <div className="item-card" key={item.juiceId}>
-          {/* <img id="pfp" src={review.pfp} alt="pfp" /> */}
-          <h2>{item.name}</h2>
-          <p>Quantity:{item.quantity}</p>
-          <p>Size:{item.size}</p>
-          <p>Comments:{item.comments}</p>
-          <button onClick={() => handleUpdate(item._id, index)}>Update</button>
-          <button onClick={() => handleDelete(item._id)}>Delete</button>
-        </div>
-      ))}
+      <div className="item">
+        {items.map((item, index) => (
+          <div className="item-card" key={item.juiceId}>
+            {/* <img id="pfp" src={review.pfp} alt="pfp" /> */}
+            <h2>{item.name}</h2>
+            <p>Quantity:{item.quantity}</p>
+            <p>Size:{item.size}</p>
+            <p>Comments:{item.comments}</p>
+            <button onClick={() => handleUpdate(item._id, index)}>
+              Update
+            </button>
+            <button onClick={() => handleDelete(item._id)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

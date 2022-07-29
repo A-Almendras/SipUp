@@ -16,7 +16,7 @@ const JuicesPage = ({ firstName }) => {
 
   return (
     <div>
-      <h1>Welcome{firstName}</h1> <p></p>
+      <h1>Welcome{firstName}</h1>
       <JuiceCard juices={juices} />
     </div>
   )

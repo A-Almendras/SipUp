@@ -35,29 +35,17 @@
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/fgfsLOnm/project-2-sip).
 
-##### The project itself was deployed and can be viewed [here](https://www.google.com/).
+##### The project itself was deployed and can be viewed [here](https://evening-woodland-13843.herokuapp.com/orders).
 
 ---
 
-### **_Screenshots_**
+#### **Component Hierarchy Diagram**
 
-#### **Image Header 1**
+![Diagram](https://imgur.com/a/t5fTr1p)
 
-##### Placeholder image
+#### **ERD**
 
-![Playing](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpawleaks.com%2Fwp-content%2Fuploads%2F2021%2F06%2Fboxer-dog.jpg&f=1&nofb=1)
-
-#### **Image Header 2**
-
-##### Placeholder image
-
-![UpClose]()
-
-#### **Image Header 3**
-
-##### Placeholder image
-
-![TongueOut]()
+![ERD](https://imgur.com/a/zn4ghMw)
 
 ---
 

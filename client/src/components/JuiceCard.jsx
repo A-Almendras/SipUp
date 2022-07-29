@@ -8,11 +8,11 @@ const JuiceCard = (props) => {
   }
 
   return (
-    <div className="juice-list">
+    <div className="juice-grid">
       {/* <h1>Juice Card Component</h1> */}
       {props.juices.map((juice) => (
         <div key={juice.name} onClick={() => showJuice(juice)}>
-          <div>
+          <div className="juice-card">
             <img src={juice.image} alt={juice.name} />
             <h2>{juice.name}</h2>
           </div>

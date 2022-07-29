@@ -23,12 +23,14 @@ const JuiceDetails = () => {
   // console.log(juiceDetails.prices)
 
   return (
-    <div>
+    <div className="juice-page">
       <h1>Juice Details Page</h1>
-      <h1>{juiceDetails.name}</h1>
-      <img src={juiceDetails.image} alt={juiceDetails.name} />
+      <h2>{juiceDetails.name}</h2>
+      <div className="img-details">
+        <img src={juiceDetails.image} alt={juiceDetails.name} />
+      </div>
+
       <p>Ingredients: {juiceDetails.description}</p>
-      <section></section>
       <section>
         <ItemToOrder juiceDetails={juiceDetails} juiceId={juiceId} />
       </section>

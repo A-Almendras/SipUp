@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const ItemToOrder = (props) => {
   const [price, setPrice] = useState(0)
-  const [name, setName] = useState(props.juiceDetails.name)
+  // const [name, setName] = useState(props.juiceDetails.name)
   const [size, setSize] = useState('')
   const [quantity, setQuantity] = useState('')
   const [comments, setComments] = useState('')
@@ -49,47 +49,54 @@ const ItemToOrder = (props) => {
     console.log(props.orders)
   }
 
-  const handleChange = (e) => {}
-
   return (
-    <div className="form-add">
+    <div>
       <h2>Price for 1: ${price}</h2>
-
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="size">Size:</label>
-        <select id="size" onChange={changeSize}>
-          <option value=""></option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-
-        <label htmlFor="level">Sugar Level:</label>
-        <select id="level">
-          <option value=""></option>
-          <option value="0%">0%</option>
-          <option value="50%">50%</option>
-          <option value="100%">100%</option>
-        </select>
-        <label htmlFor="quantity">Quantity:</label>
-        <input
-          type="number"
-          id="quantity"
-          onChange={changeQuantity}
-          defaultValue={1}
-          value={quantity}
-        />
-        <label htmlFor="comments">Comments:</label>
-        <textarea
-          id="comments"
-          onChange={changeComments}
-          value={comments}
-          placeholder={'Write any comments youd want to let us know'}
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button type="submit">Add to Order</button>
-      </form>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-size">
+            <label htmlFor="size">Size:</label>
+            <select id="size" onChange={changeSize}>
+              <option value=""></option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div className="form-level">
+            <label htmlFor="level">Sugar Level:</label>
+            <select id="level">
+              <option value=""></option>
+              <option value="0%">0%</option>
+              <option value="50%">50%</option>
+              <option value="100%">100%</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="quantity">Quantity:</label>
+            <input
+              className="form-qty"
+              type="number"
+              id="quantity"
+              onChange={changeQuantity}
+              defaultValue={1}
+              value={quantity}
+            />
+          </div>
+          <div>
+            <label htmlFor="comments">Comments:</label>
+            <textarea
+              id="comments"
+              onChange={changeComments}
+              value={comments}
+              placeholder={'Write any comments youd want to let us know'}
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button type="submit">Add to Order</button>
+        </form>
+      </div>
     </div>
   )
 }
