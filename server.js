@@ -17,10 +17,15 @@ const app = express()
 app.use(express.json()) // creates req.body from incoming (serving & receiving) JSON request bodies
 app.use(cors()) // any origin that is requesting data from this API can have access
 app.use(logger('dev'))
+app.use(express.static(`${__dirname}/client/build`))
 
 // Mount Routes
 app.get('/', (req, res) => {
   res.send('Welcome to SipUp')
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 app.use('/api', routes)

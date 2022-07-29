@@ -4,6 +4,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 const EditForm = (props) => {
   const [price, setPrice] = useState(0)
+  // const [name, setName] = useState(props.juiceDetails.name)
+  // const [size, setSize] = useState('')
+  // const [quantity, setQuantity] = useState('')
+  // const [comments, setComments] = useState('')
 
   let navigate = useNavigate()
 
@@ -54,7 +58,7 @@ const EditForm = (props) => {
   }
 
   return (
-    <div>
+    <div className="form-edit">
       <h1> Edit Item</h1>
       <form onSubmit={handleSubmit}>
         <h2>${price}</h2>

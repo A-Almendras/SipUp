@@ -35,7 +35,7 @@ const main = async () => {
       name: 'Detoxifier',
       description: 'Carrot, Apple, Spinach, Kale, Orange',
       image:
-        'https://perchancetocook.com/wp-content/uploads/2018/04/Tropical-Kale-Carrot-Orange-Juice-perchancetocook-5-741x1024.jpg',
+        'https://www.lallafatema.ma/wp-content/uploads/2021/04/%D9%88%D8%B5%D9%81%D8%A7%D8%AA.jpg',
       size: ['Small', 'Medium', 'Large'],
       prices: [8, 10, 12]
     }

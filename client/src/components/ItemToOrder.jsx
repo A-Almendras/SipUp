@@ -52,7 +52,7 @@ const ItemToOrder = (props) => {
   const handleChange = (e) => {}
 
   return (
-    <div>
+    <div className="form-add">
       <h2>Price for 1: ${price}</h2>
 
       <form onSubmit={handleSubmit}>
