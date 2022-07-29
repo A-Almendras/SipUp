@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-// import ItemToOrder from './ItemToOrder'
 
 const Nav = () => {
   return (

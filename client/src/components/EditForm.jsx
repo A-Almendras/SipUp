@@ -4,10 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 const EditForm = (props) => {
   const [price, setPrice] = useState(0)
-  // const [name, setName] = useState(props.juiceDetails.name)
-  // const [size, setSize] = useState('')
-  // const [quantity, setQuantity] = useState('')
-  // const [comments, setComments] = useState('')
 
   let navigate = useNavigate()
 
@@ -23,7 +19,7 @@ const EditForm = (props) => {
   const [formState, setFormState] = useState(initialState)
 
   const getItem = async () => {
-    let response = await axios.get(`http://localhost:3001/api/orders/${id}`)
+    let response = await axios.get(`/api/orders/${id}`)
     console.log(response.data)
     setFormState(response.data)
   }
@@ -33,16 +29,6 @@ const EditForm = (props) => {
   }, [])
 
   const handleChange = (e) => {
-    // if (e.target.value === 'small') {
-    //   setPrice(juiceDetails.prices[0])
-    //   formState.size = 'small' // still a bit unsure about this
-    // } else if (e.target.value === 'medium') {
-    //   setPrice(juiceDetails.prices[1])
-    //   formState.size = 'medium'
-    // } else if (e.target.value === 'large') {
-    //   setPrice(juiceDetails.prices[2])
-    //   formState.size = 'large'
-    // }
     e.preventDefault()
     console.log(e.target.value)
 
@@ -51,7 +37,7 @@ const EditForm = (props) => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/api/orders/${id}`, formState)
+    await axios.put(`/api/orders/${id}`, formState)
     // console.log(response)
     setFormState(initialState)
     navigate('/orders')
@@ -94,7 +80,7 @@ const EditForm = (props) => {
           cols="30"
           rows="10"
         ></textarea>
-        <button type="submit">Update</button>
+        <button type="submit">Re-Submit</button>
       </form>
     </div>
   )

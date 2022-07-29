@@ -7,7 +7,7 @@ const JuicesPage = ({ firstName }) => {
 
   useEffect(() => {
     const getJuices = async () => {
-      const response = await axios.get('http://localhost:3001/api/juices')
+      const response = await axios.get('/api/juices')
       // console.log(response)
       setJuices(response.data)
     }
@@ -16,7 +16,7 @@ const JuicesPage = ({ firstName }) => {
 
   return (
     <div>
-      <h1>Welcome{firstName}</h1>
+      <h1>Welcome{firstName}</h1> // does not work correctly
       <JuiceCard juices={juices} />
     </div>
   )

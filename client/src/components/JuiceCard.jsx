@@ -9,7 +9,6 @@ const JuiceCard = (props) => {
 
   return (
     <div className="juice-grid">
-      {/* <h1>Juice Card Component</h1> */}
       {props.juices.map((juice) => (
         <div key={juice.name} onClick={() => showJuice(juice)}>
           <div className="juice-card">

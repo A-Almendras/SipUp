@@ -5,8 +5,6 @@ const routes = require('./routes')
 const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
-// const { juiceController } = require('./controllers')
-// const { Juice } = require('./models')
 
 //  Initialize the Express App
 const app = express()
@@ -25,11 +23,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', routes)
-// app.get('/juices', juiceController.getJuices)
-// app.get('/juices', async (req, res) => {
-//   const juices = await Juice.find({})
-//   res.json(juices)
-// })
 
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)

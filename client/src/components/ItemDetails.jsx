@@ -11,26 +11,20 @@ const ItemDetails = (props) => {
   const navigate = useNavigate()
 
   const handleUpdate = async (id, index) => {
-    // await axios.put(`http://localhost:3001/api/orders/${id}`)
-    // props.getOrders()
-    // console.log(id)
-    await axios.get(`http://localhost:3001/api/orders/${id}`)
+    await axios.get(`/api/orders/${id}`)
     navigate(`/orders/${id}`)
-    // props.getOrders()
   }
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3001/api/orders/${id}`)
+    await axios.delete(`/api/orders/${id}`)
     props.getOrders()
   }
 
   return (
     <div>
-      <h1>Item Details</h1>
       <div className="item">
         {items.map((item, index) => (
           <div className="item-card" key={item.juiceId}>
-            {/* <img id="pfp" src={review.pfp} alt="pfp" /> */}
             <h2>{item.name}</h2>
             <p>Quantity:{item.quantity}</p>
             <p>Size:{item.size}</p>

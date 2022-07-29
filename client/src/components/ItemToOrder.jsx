@@ -3,7 +3,6 @@ import axios from 'axios'
 
 const ItemToOrder = (props) => {
   const [price, setPrice] = useState(0)
-  // const [name, setName] = useState(props.juiceDetails.name)
   const [size, setSize] = useState('')
   const [quantity, setQuantity] = useState('')
   const [comments, setComments] = useState('')

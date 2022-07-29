@@ -30,16 +30,3 @@ module.exports = {
   getAllJuices,
   getJuiceById
 }
-
-// const { JuiceSchema } = require('../models/juice')
-// const getAllJuices = async (req, res) => {
-//   console.log('hello')
-//   try {
-//     const juices = await JuiceSchema.find()
-//     console.log(juices)
-//     res.status(200).json(juices)
-//   } catch (error) {
-//     console.log(error)
-//     res.status(500).send(error.message)
-//   }
-// }

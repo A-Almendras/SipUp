@@ -41,17 +41,6 @@ const main = async () => {
     }
   ]
 
-  // const preOrder = await new Order({
-  //   name: 'Flavia Almendras',
-  //   paymentMethod: 'Cash',
-  //   pickupMethod: 'In-store',
-  //   address: '123 Lolsob',
-  //   totalAmount: 10,
-  //   juices: [{ juice_Id: juices._id, quantity: 1 }],
-  //   status: 'Ordering'
-  // })
-  // await preOrder.save()
-
   await Juice.insertMany(juices)
   console.log('PreOrder has been placed!') // will mostly likely not be needed in the end
   console.log('Fruits have been juiced!')

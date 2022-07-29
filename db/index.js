@@ -1,6 +1,5 @@
 // MONGOOSE DATABASE CONNECTION
 const mongoose = require('mongoose')
-// const { mainModule } = require('process')
 require('dotenv').config() // Add this line
 
 // once MongoDB deployed and url in .env, put this in .connect() process.env.MONGODB_URI & erase line 6
