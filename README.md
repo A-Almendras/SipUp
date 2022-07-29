@@ -4,7 +4,7 @@
 
 ### By: Anaflavia Almendras
 
-#### [SipUp](https://evening-woodland-13843.herokuapp.com/juices) | [GitHub](https://github.com/A-Almendras) | [LinkedIn](https://www.linkedin.com/in/aalmendras/)
+#### [SipUp](https://evening-woodland-13843.herokuapp.com/) | [GitHub](https://github.com/A-Almendras) | [LinkedIn](https://www.linkedin.com/in/aalmendras/)
 
 ---
 
@@ -14,7 +14,7 @@
 
 ### **_Description_**
 
-##### SipUp is a juice bar application in where a user is able to order their juices of choice based on what juices are available. Once the user clicks on the drink they will be brought to the Juice Details Page in where they are able to select size, sugar level, qty, and any comments you'd like us to know about the order. Once they click 'Add to Order', the user can find their orders in the navigation section. There they can update an existing or delete the order all together.
+##### SipUp is a juice bar application in where a user is able to order their juices of choice based on what juices are available.
 
 ---
 
@@ -33,13 +33,13 @@
 
 ### **_Project Overview_**
 
-##### Once the user clicks on the drink they will be brought to the Juice Details Page in where they are able to select size, sugar level, qty, and any comments you'd like us to know about the order. Once they click 'Add to Order', the user can find their orders in the navigation section. There they can update an existing or delete the order all together.
+##### Once the user lands on the page, they will be prompt to enter their full name and payment method. Once that is submitted the user will be redirected to a page containing all the juices SipUp offers. Once the user clicks on the drink they will be brought to the Juice Details Page in where they are able to select size, sugar level, qty, and any comments you'd like us to know about the order. Once they click 'Add to Order', the user can find their orders in the navigation section. There they can update an existing or delete the order all together.
 
 ##### --
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/fgfsLOnm/project-2-sip).
 
-##### The project itself was deployed and can be viewed [here](https://evening-woodland-13843.herokuapp.com/juices).
+##### The project itself was deployed and can be viewed [here](https://evening-woodland-13843.herokuapp.com/).
 
 ---
 

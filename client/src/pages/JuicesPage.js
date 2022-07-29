@@ -16,7 +16,8 @@ const JuicesPage = ({ firstName }) => {
 
   return (
     <div>
-      <h1>Welcome{firstName}</h1> // does not work correctly
+      {/* Welcome does not work correctly */}
+      <h1>Welcome{firstName}</h1>
       <JuiceCard juices={juices} />
     </div>
   )
