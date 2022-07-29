@@ -21,7 +21,7 @@ const OrderDetails = (props) => {
     <div>
       <h1>Order: Details of Each Item</h1>
       <ItemDetails orders={orders} getOrders={getOrders} />
-      <EditForm orders={orders} getOrders={getOrders} />
+      {/* <EditForm orders={orders} getOrders={getOrders} /> */}
     </div>
   )
 }
