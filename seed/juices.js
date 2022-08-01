@@ -42,7 +42,7 @@ const main = async () => {
   ]
 
   await Juice.insertMany(juices)
-  console.log('PreOrder has been placed!') // will mostly likely not be needed in the end
+  // console.log('PreOrder has been placed!') // will mostly likely not be needed in the end
   console.log('Fruits have been juiced!')
 }
 
