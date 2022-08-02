@@ -9,7 +9,7 @@ const ItemToOrder = (props) => {
 
   const addItemToOrder = async (e) => {
     await axios.post('http://localhost:3001/api/order', {
-      name: props.name,
+      name: props.juiceDetails.name,
       size: size,
       quantity: quantity,
       comments: comments
