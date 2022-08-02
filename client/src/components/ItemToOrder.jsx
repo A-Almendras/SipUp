@@ -8,7 +8,7 @@ const ItemToOrder = (props) => {
   const [comments, setComments] = useState('')
 
   const addItemToOrder = async (e) => {
-    await axios.post('http://localhost:3001/api/order', {
+    await axios.post('/api/order', {
       name: props.juiceDetails.name,
       size: size,
       quantity: quantity,
